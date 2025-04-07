@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Personalia</legend>
+        <label for="fname">First name:</label>
+        <input type="text" name="fname" id="fname" placeholder="First name" />
+        <br />
+        <label for="lname">Last name:</label>
+        <input
+          type="text"
+          name="lname"
+          id="lname"
+          placeholder="Last name"
+        /><br /><br />
+        <label for="email">Email address:</label>
+        <input type="email" name="email" id="email" /><br />
+        <label for="pwd">Password:</label>
+        <input type="password" name="pwd" id="pwd" /><br />
+        <p>Kjønn:</p>
+        <input type="radio" name="gender" id="male" value="Male" />
+        <label for="male">Male</label>
+        <br />
+        <input type="radio" name="gender" id="female" value="Female" />
+        <label for="female">Female</label><br />
+        <input
+          type="radio"
+          name="gender"
+          id="notspecified"
+          value="Not specified"
+        />
+        <label for="notspecified">Not specified</label>
+        <br /><br />
+        <label for="birthdate">Enter your date of birth:</label><br />
+        <input
+          type="date"
+          name="birthdate"
+          id="birthdate"
+          min="1970-01-01"
+          max="2025-04-07"
+        />
+        <br /><br />
+        <label for="bdatespecific">Be more specific!</label><br />
+        <input type="datetime-local" name="bdatespecific" id="bdatespecific" />
+
+        <br /><input type="submit" value="Submit form" />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>The fun stuff!</legend>
+        <label for="favcolor">Your favourite color:</label> <br />
+        <input type="color" name="favcolor" id="favcolor" />
+        <br />
+        <label for="country">What is your dream destination?</label><br />
+        <select name="country" id="country">
+          <option value="nothing" selected disabled>--</option>
+          <option value="japan">Japan</option>
+          <option value="france">France</option>
+          <option value="southkorea">South Korea</option>
+          <option value="northkorea">North Korea</option>
+          <option value="ireland">Ireland</option>
+        </select>
+        <br />
+        <label for="poem">Your favourite poem:</label><br />
+        <textarea name="poem" id="poem">
+Write your favourite poem here
+    </textarea
+        >
+        <br /><br />
+        <p>Choose your browser:</p>
+        <input type="checkbox" name="firefox" id="firefox" />
+        <label for="firefox">Firefox</label><br />
+        <input type="checkbox" name="chrome" id="chrome" />
+        <label for="chrome">Chrome</label>
+        <br /><br />
+        <p>Or add your own:</p>
+        <input list="browsers" />
+        <datalist id="browsers">
+          <option value="Edge"></option>
+          <option value="Chrome"></option>
+          <option value="Firefox"></option>
+          <option value="Opera"></option>
+          <option value="Brave"></option>
+        </datalist>
+        <br /><br />
+        <input
+          type="image"
+          src="./submit-successfully.svg"
+          alt="Submit"
+          width="40"
+          height="40"
+        />
+      </fieldset>
+    </form>
+  </body>
+</html>
